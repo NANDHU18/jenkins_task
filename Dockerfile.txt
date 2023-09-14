@@ -1,0 +1,14 @@
+# Use the official Apache image as the base image
+FROM httpd:latest
+
+# Optionally, you can copy your custom configuration files to the Apache configuration directory
+# COPY ./my-apache-config.conf /usr/local/apache2/conf/httpd.conf
+
+# You can also copy your website files into the web root directory
+# COPY ./my-website /usr/local/apache2/htdocs/
+
+# Expose the default Apache HTTP port (80)
+EXPOSE 80
+
+# Start the Apache HTTP Server
+CMD ["httpd-foreground"]
